@@ -183,6 +183,15 @@ PRODUCT_PACKAGES += \
 endif
 endif
 
+# ADB
+ifeq ($(TARGET_BUILD_VARIANT), eng)
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.adb.secure=0
+else
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.adb.secure=1
+endif
+
 # Dex preopt
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI \
