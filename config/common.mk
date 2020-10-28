@@ -1,5 +1,5 @@
-# Allow vendor/extra to override any property by setting it first
-$(call inherit-product-if-exists, vendor/extra/product.mk)
+# Set Custom Branding Makefiles
+$(call inherit-product-if-exists, vendor/syntatix/config/branding.mk)
 
 PRODUCT_BRAND ?= SyntatiX-OS
 
@@ -76,14 +76,6 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 
 # Include AOSP audio files
 include vendor/syntatix/config/aosp_audio.mk
-
-# Include Lineage audio files
-include vendor/syntatix/config/lineage_audio.mk
-
-ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
-# Lineage SDK
-include vendor/syntatix/config/lineage_sdk_common.mk
-endif
 
 # TWRP
 ifeq ($(WITH_TWRP),true)
