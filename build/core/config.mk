@@ -18,7 +18,13 @@ INTERNAL_LINEAGE_PLATFORM_API_FILE := $(TARGET_OUT_COMMON_INTERMEDIATES)/PACKAGI
 INTERNAL_LINEAGE_PLATFORM_REMOVED_API_FILE := $(TARGET_OUT_COMMON_INTERMEDIATES)/PACKAGING/lineage_removed.txt
 FRAMEWORK_LINEAGE_PLATFORM_API_FILE := $(TOPDIR)lineage-sdk/api/lineage_current.txt
 FRAMEWORK_LINEAGE_PLATFORM_REMOVED_API_FILE := $(TOPDIR)lineage-sdk/api/lineage_removed.txt
-FRAMEWORK_LINEAGE_API_NEEDS_UPDATE_TEXT := $(TOPDIR)vendor/lineage/build/core/apicheck_msg_current.txt
+FRAMEWORK_LINEAGE_API_NEEDS_UPDATE_TEXT := $(TOPDIR)vendor/syntatix/build/core/apicheck_msg_current.txt
 
 # Rules for QCOM targets
-include $(TOPDIR)vendor/lineage/build/core/qcom_target.mk
+include $(TOPDIR)vendor/syntatix/build/core/qcom_target.mk
+
+# Include Custom Branding
+include $(TOPDIR)/vendor/syntatix/config/branding.mk
+
+# Boot Animation
+include $(TOPDIR)/vendor/syntatix/config.mk
