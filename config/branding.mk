@@ -20,7 +20,7 @@ CUSTOM_PLATFORM_VERSION := 11
 
 TARGET_PRODUCT_SHORT := $(subst syntatix_,,$(CUSTOM_BUILD))
 
-SYNTATIX_VER := SyntatiX-OS-$(SYNTATIX_VERSION)-$(CUSTOM_BUILD)$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD_TYPE)
+SYNTATIX_VER := SyntatiX-OS_$(TARGET_DEVICE)-$(SYNTATIX_VERSION)-$(CUSTOM_BUILD_DATE)$(SYNAPTIX_BUILD_TYPE)
 CUSTOM_VERSION_PROP := 11
 
 CUSTOM_PROPERTIES := \
@@ -28,4 +28,4 @@ CUSTOM_PROPERTIES := \
     org.syntatix.build_date=$(CUSTOM_BUILD_DATE) \
     org.syntatix.build_date_utc=$(CUSTOM_BUILD_DATE_UTC) \
     org.syntatix.build_type=$(CUSTOM_BUILD_TYPE) \
-    org.syntatix.build_version=$(CESIUM_VERSION)
+    org.syntatix.build_version=$(SYNAPTIX_VERSION)
